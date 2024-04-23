@@ -9,7 +9,7 @@ const TopBar=()=>{
   return(
     <div id='topbar'  >
       <div id='namecontainer'>
-        <p> <FaBarsStaggered/> Welcome! <strong>John Smith</strong> </p>
+        <p> <FaBarsStaggered/> Welcome! <strong>Alex Robert</strong> </p>
       </div>
       <div id='usernoticedash'>
         <div id='notice'>

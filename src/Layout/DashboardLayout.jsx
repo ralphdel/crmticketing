@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom"
 import TopBar from "../components/Topbar/Topbar"
 import Sidebar from "../components/sidebar/Sidebar"
 import "./Dashboardlayout.css"
+import TicketForm from "../pages/ticketform/Ticketform"
 
 const Dashboard=()=>{
 
@@ -12,7 +13,10 @@ const Dashboard=()=>{
       </div>
       <div>
         <TopBar/>
-        <Outlet/>
+        <div>
+        <TicketForm/>
+        </div>
+        
       </div>
 
 
