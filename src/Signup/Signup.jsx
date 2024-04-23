@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Signup.css'
 import { Link } from 'react-router-dom'
-const Signup = () => {
+const Signup = ({click}) => {
 
     const [creatUser, setCreateUser] = useState({
         Firstname: "",
@@ -12,7 +12,7 @@ const Signup = () => {
 
     })
 
-
+   
     const handleChange = (e) => {
         const { name, value } = e.target;
         setCreateUser((prevUser) => ({
@@ -24,9 +24,15 @@ const Signup = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(creatUser);
+
+/*
+<div className='inn'>
+                    <p className='message'>Already have an account? <Link to="/login">Sign in</Link></p>
+                </div>
+*/
     }
     return (
-        <div>
+        <div id='formcontainer'>
 
             <form className='form' onSubmit={handleSubmit}>
                 <p className='title'>Register</p>
@@ -73,11 +79,9 @@ const Signup = () => {
 
 
 
-                <button className='submit' type='submit'>Submit</button>
+                <button className='submit' type='submit' onClick={click} >Submit</button>
 
-                <div className='inn'>
-                    <p className='message'>Already have an account? <Link to="/login">Sign in</Link></p>
-                </div>
+                
 
             </form>
         </div>
